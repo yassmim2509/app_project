@@ -65,7 +65,7 @@ class _CadastroState extends State<Cadastro> {
                       fillColor: const Color.fromARGB(153, 165, 63, 131),
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10),
-                        borderSide: BorderSide.none,
+                        
                       ),
                       contentPadding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
                     ),
