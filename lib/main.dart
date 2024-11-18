@@ -26,6 +26,9 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: "/contas",
       routes: {
+          '/gradient': (context) => GradientScreen(),
+        '/album': (context) => AlbumScreen(),
+        '/usuario': (context) => ProfileScreen(),
         '/contas': (context) => const Contas(),
         '/adicioneConta' : (context) => const AdicioneConta(),
         '/erro': (context) => const Erro(),
