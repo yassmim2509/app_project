@@ -1,4 +1,4 @@
-# app_project
+# app_streaming
 
 A new Flutter project.
 
