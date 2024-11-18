@@ -4,6 +4,9 @@ import 'package:app_streaming/pages/contas.dart';
 import 'package:app_streaming/pages/erro.dart';
 import 'package:flutter/material.dart';
 import 'package:app_streaming/pages/style.dart';
+import 'package:quintoflutter/pages/perfis/perfil_slipmami.dart';
+import 'package:quintoflutter/pages/álbum.dart';
+import 'package:quintoflutter/pages/perfis/perfil_usuario.dart';
 
 void main() {
   runApp(const MyApp());
