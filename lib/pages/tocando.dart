@@ -64,7 +64,7 @@ class _TocandoState extends State<Tocando> {
                     ],
                   ),
                 ),
-                const SizedBox(height: 50), // Espaço controlado entre o topo e o próximo widget
+                const SizedBox(height: 40), // Espaço controlado entre o topo e o próximo widget
                 Center(
                   child: GestureDetector(
                     onTap: () {
