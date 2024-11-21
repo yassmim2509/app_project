@@ -1,171 +1,168 @@
-import 'package:flutter/material.dart';
+// import 'package:flutter/material.dart';
 
-class Tocando extends StatefulWidget {
-  const Tocando({super.key});
+// class Pesquisa extends StatefulWidget {
+//   const Pesquisa({super.key});
 
-  @override
-  State<Tocando> createState() => _TocandoState();
-}
+//   @override
+//   State<Pesquisa> createState() => _LoginState();
+// }
 
-class _TocandoState extends State<Tocando> {
-  final _formKey = GlobalKey<FormState>();
-  bool _showPassword = false;
+// class _LoginState extends State<Pesquisa> {
+//   final _formKey = GlobalKey<FormState>();
+//   bool _showPassword = false;
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 0, 0, 0), // Cor de fundo preta
-      body: Container(
-        height: MediaQuery.of(context).size.height,
-        padding: const EdgeInsets.all(12.0), // Margem interna ao redor do container principal
-        margin: const EdgeInsets.all(12), // Margem externa ao redor do container principal
-        decoration: const BoxDecoration(
-          color: Color.fromARGB(255, 0, 0, 0), // Cor sólida de fundo (preta)
-        ),
-        child: SingleChildScrollView(
-          child: Form(
-            key: _formKey,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(top: 20), // Controle da distância do topo
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.start, // Alinha ambos ao lado esquerdo
-                    children: [
-                      GestureDetector(
-                        onTap: () {
-                          Navigator.pushNamed(context, '/cadastro');
-                        },
-                        child: Image.asset(
-                          "assets/setadescer.png",
-                          width: 50, // Largura da imagem
-                          height: 50, // Altura da imagem
-                        ),
-                      ),
-                      const SizedBox(width: 5),
-                      const Text(
-                        "OUVINDO DE :",
-                        style: TextStyle(
-                          fontSize: 15, // Tamanho do texto
-                          fontWeight: FontWeight.bold,
-                          color: Color.fromARGB(255, 255, 252, 252), // Cor do texto
-                        ),
-                      ),
-                      const SizedBox(width: 5),
-                      const Text(
-                        "HOME",
-                        style: TextStyle(
-                          fontSize: 15, // Tamanho do texto
-                          fontWeight: FontWeight.bold,
-                          color: Color.fromARGB(255, 255, 252, 252), // Cor do texto
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                const SizedBox(height: 50), // Espaço controlado entre o topo e o próximo widget
-                Center(
-                  child: GestureDetector(
-                    onTap: () {
-                      Navigator.pushNamed(context, '/tocando');
-                    },
-                    child: Image.asset(
-                      "assets/capamusica.png"
-                    ),
-                  ),
-                ),
-                const SizedBox(height: 5), // Espaço controlado entre o topo e o próximo widget
-                const Text(
-                  "Racha",
-                  style: TextStyle(
-                    fontSize: 30, // Tamanho do texto
-                    fontWeight: FontWeight.bold,
-                    color: Color.fromARGB(255, 255, 252, 252), // Cor do texto
-                  ),
-                ),
-                const Text(
-                  "Urias",
-                  style: TextStyle(
-                    fontSize: 20, // Tamanho do texto
-                    color: Color.fromARGB(255, 255, 252, 252), // Cor do texto
-                  ),
-                ),
-                const SizedBox(height: 10), // Espaço controlado entre o topo e o próximo widget
-                Center(
-                  child: GestureDetector(
-                    onTap: () {
-                    },
-                    child: Image.asset(
-                      "assets/linha.png"
-                    ),
-                  ),
-                ),
-                const SizedBox(height: 20), // Espaço controlado entre o topo e o próximo widget
-                Center(
-                  child: GestureDetector(
-                    onTap: () {
-                      Navigator.pushNamed(context, '/cadastro');
-                    },
-                    child: Image.asset(
-                      "assets/play.png"
-                    ),
-                  ),
-                ),
-                const SizedBox(height: 20), // Espaço controlado entre o topo e o próximo widget
-                Row( // Colocando "setas" e "compartilhar" nas extremidades com o texto ao centro
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween, // Alinha um em cada canto
-                  children: [
-                    GestureDetector(
-                      onTap: () {
-                        Navigator.pushNamed(context, '/cadastro');
-                      },
-                      child: Image.asset(
-                        "assets/setas.png"
-                      ),
-                    ),
-                    const Text(
-                      "ÁLBUM : FÚRIA",
-                      style: TextStyle(
-                        fontSize: 20, // Tamanho do texto
-                        fontWeight: FontWeight.bold,
-                        color: Color.fromARGB(255, 255, 252, 252), // Cor do texto
-                      ),
-                    ),
-                    GestureDetector(
-                      onTap: () {
-                        Navigator.pushNamed(context, '/cadastro');
-                      },
-                      child: Image.asset(
-                        "assets/compartilhar.png"
-                      ),
-                    ),
-                  ],
-                ),
-                const SizedBox(height: 20), // Espaço controlado entre o topo e o próximo widget
-                Center(
-                  child: GestureDetector(
-                    onTap: () {
-                    },
-                    child: Image.asset(
-                      "assets/letra.png"
-                    ),
-                  ),
-                ),
-                const SizedBox(height: 50),
-              ],
-            ),
-          ),
-        ),
-      ),
-    );
-  }
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       backgroundColor: const Color.fromARGB(255, 0, 0, 0),
+//       body: Container(
+//         height: MediaQuery.of(context).size.height,
+//         padding: const EdgeInsets.all(12.0),
+//         margin: const EdgeInsets.all(12),
+//         decoration: const BoxDecoration(
+//           gradient: LinearGradient(
+//             begin: Alignment.topCenter,
+//             end: Alignment.bottomCenter,
+//             colors: [
+//               Color.fromARGB(255, 145, 13, 101),
+//               Color.fromARGB(144, 0, 0, 0),
+//             ],
+//           ),
+//         ),
+//         child: SingleChildScrollView(
+//           child: Form(
+//             key: _formKey,
+//             child: Column(
+//               crossAxisAlignment: CrossAxisAlignment.center,
+//               children: [
+//                 Container(
+//                   width: 350,
+//                   child: TextFormField(
+//                     autofocus: true,
+//                     decoration: InputDecoration(
+//                       filled: true,
+//                       fillColor: const Color.fromARGB(153, 165, 63, 131),
+//                       border: OutlineInputBorder(
+//                         borderRadius: BorderRadius.circular(15),
+//                         borderSide: BorderSide.none,
+//                       ),
+//                     ),
+//                     style: const TextStyle(
+//                         color: Color.fromARGB(255, 252, 252, 252)),
+//                   ),
+//                 ),
+//                 const SizedBox(height: 20),
+//                 const Text(
+//                   "SENHA",
+//                   style: TextStyle(
+//                     fontSize: 18,
+//                     color: Color.fromARGB(255, 255, 252, 252),
+//                   ),
+//                 ),
+//                 const SizedBox(height: 10),
+//                 Container(
+//                   width: 350,
+//                   child: TextFormField(
+//                     obscureText: !_showPassword,
+//                     decoration: InputDecoration(
+//                       filled: true,
+//                       fillColor: const Color.fromARGB(153, 165, 63, 131),
+//                       suffixIcon: GestureDetector(
+//                         child: Icon(
+//                           _showPassword
+//                               ? Icons.visibility
+//                               : Icons.visibility_off,
+//                           color: const Color.fromARGB(255, 250, 250, 250),
+//                         ),
+//                         onTap: () {
+//                           setState(() {
+//                             _showPassword = !_showPassword;
+//                           });
+//                         },
+//                       ),
+//                       border: OutlineInputBorder(
+//                         borderRadius: BorderRadius.circular(15),
+//                         borderSide: BorderSide.none,
+//                       ),
+//                     ),
+//                     validator: (String? senha) {
+//                       if (senha == "" || senha == null) {
+//                         return "A senha não pode ser vazia";
+//                       }
+//                       if (senha.length < 8) {
+//                         return "Senha deve conter 8 caracteres";
+//                       }
+//                       if (senha.contains("+")) {
+//                         return "A senha não pode conter +";
+//                       }
+//                       return null;
+//                     },
+//                     style: const TextStyle(
+//                         color: Color.fromARGB(255, 252, 252, 252)),
+//                   ),
+//                 ),
+//                 const SizedBox(height: 30),
+//                 Center(
+//                   child: SizedBox(
+//                     width: 90,
+//                     height: 50,
+//                     child: ElevatedButton(
+//                       onPressed: buttonEnterClick,
+//                       child: const Text(
+//                         "Entrar",
+//                         style: TextStyle(
+//                           fontSize: 15,
+//                           fontWeight: FontWeight.bold,
+//                         ),
+//                       ),
+//                       style: ElevatedButton.styleFrom(
+//                         backgroundColor: const Color.fromARGB(255, 61, 94, 58),
+//                         foregroundColor: Colors.white,
+//                         padding: const EdgeInsets.symmetric(vertical: 15),
+//                       ),
+//                     ),
+//                   ),
+//                 ),
+//                 const SizedBox(height: 10),
+//                 const Divider(),
+//                 const SizedBox(height: 20),
+//                 const Center(
+//                   child: Text(
+//                     "Não possui login?",
+//                     style: TextStyle(
+//                       fontSize: 20,
+//                       color: Color.fromARGB(255, 255, 255, 255),
+//                     ),
+//                   ),
+//                 ),
+//                 Center(
+//                   child: GestureDetector(
+//                     onTap: () {
+//                       Navigator.pushNamed(context, "/cadastro");
+//                       },
+//                     child: const Text(
+//                       "CADASTRE-SE",
+//                       style: TextStyle(
+//                         fontWeight: FontWeight.bold,
+//                         fontSize: 20,
+//                         color: Color.fromARGB(255, 165, 63, 131),
+//                       ),
+//                     ),
+//                   ),
+//                 ),
+//               ],
+//             ),
+//           ),
+//         ),
+//       ),
+//     );
+//   }
 
-  void buttonEnterClick() {
-    if (_formKey.currentState!.validate()) {
-      Navigator.pushReplacementNamed(context, '/');
-    } else {
-      print("form erro");
-    }
-  }
-}
+//   void buttonEnterClick() {
+//     if (_formKey.currentState!.validate()) {
+//       Navigator.pushReplacementNamed(context, '/homeWithNavBar');
+//     } else {
+//       print("form erro");
+//     }
+//   }
+// }
