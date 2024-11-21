@@ -1,4 +1,4 @@
-name: quintoflutter
+name: app_streaming
 description: "A new Flutter project."
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
@@ -27,19 +27,27 @@ environment:
 # dependencies can be manually updated by changing the version numbers below to
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
+
+
 dependencies:
   flutter:
     sdk: flutter
+  webview_flutter: ^4.0.0
+  webview_flutter_android: ^4.0.0
+  webview_flutter_wkwebview: 3.16.1
+  webview_flutter_platform_interface: ^2.1.0
 
 
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
+  url_launcher: ^6.3.1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
@@ -54,39 +62,59 @@ dev_dependencies:
 # The following section is specific to Flutter packages.
 flutter:
   assets:
-    - assets/images/logo.png
-    - assets/images/estrelalogin.png
-    - assets/images/porta.png
-    - assets/images/gifsplash.gif
-    - assets/images/gifindividual.gif
-    - assets/images/slipmami.png
-    - assets/images/oompaloompa.png 
-    - assets/images/cervaswa.png
-    - assets/images/ficha.png
-    - assets/images/malvatrem.png
-    - assets/images/posturada1.png
-    - assets/images/slipajudou.png
-    - assets/images/seta.png
-    - assets/images/racha.png
-    - assets/images/furia.png
-    - assets/images/foto_usuario.png
-    - assets/images/pesq. melanie.png
-    - assets/images/pesq. matue.png
-    - assets/images/pesq. jm.png
-    - assets/images/pesq veigh.png
-    - assets/images/dispositivos.png
-    - assets/images/informações.png
-    - assets/images/plano.png
+
+   - assets/imagens/logo.png
+    - assets/imagens/estrelalogin.png
+    - assets/imagens/gifsplash.gif
+    - assets/imagens/gifindividual.gif
+    - assets/imagens/slipmami.png
+    - assets/imagens/oompaloompa.png 
+    - assets/imagens/cervaswa.png
+    - assets/imagens/ficha.png
+    - assets/imagens/malvatrem.png
+    - assets/imagens/posturada1.png
+    - assets/imagens/slipajudou.png
+    - assets/imagens/seta.png
+    - assets/imagens/racha.png
+    - assets/imagens/furia.png
+    - assets/imagens/foto_usuario.png
+    - assets/imagens/pesq. melanie.png
+    - assets/imagens/pesq. matue.png
+    - assets/imagens/pesq. jm.png
+    - assets/imagens/pesq veigh.png
+    - assets/imagens/dispositivos.png
+    - assets/imagens/informações.png
+    - assets/imagens/plano.png
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
 
+  assets:
+   - assets/images/
+   
+  fonts:
+    - family: Lexend
+      fonts:
+
+        - asset: assets/fonts/Lexend-Black.ttf
+        - asset: assets/fonts/Lexend-Bold.ttf
+
+    - family: LexendGiga
+      fonts:
+        - asset: assets/fonts/LexendGiga-Light.ttf
+        - asset: assets/fonts/LexendGiga-Regular.ttf
+
+
+
+
+ 
   # To add assets to your application, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
+        - asset: assets/fonts/Lexend-Regular.ttf
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
@@ -106,6 +134,7 @@ flutter:
       fonts:
         - asset: assets/fonts/Lexend-ExtraBold.ttf
         
+
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro

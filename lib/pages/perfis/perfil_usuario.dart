@@ -51,6 +51,7 @@ class ProfileScreen extends StatelessWidget {
                     height: 50,
                     child: Image.asset(
                       'assets/images/seta.png', 
+
                       height: 50,
                     ),
                   ),
@@ -63,6 +64,7 @@ class ProfileScreen extends StatelessWidget {
                       padding: const EdgeInsets.symmetric(vertical: 20.0),
                       child: Image.asset(
                         'assets/images/foto_usuario.png',
+
                         height: 200,
                     
                       ),
@@ -106,6 +108,7 @@ class ProfileScreen extends StatelessWidget {
                             8), 
                         child: Image.asset(
                           'assets/images/pesq. melanie.png', 
+
                           fit: BoxFit
                               .cover, 
                         ),
@@ -122,6 +125,7 @@ class ProfileScreen extends StatelessWidget {
                             8), 
                         child: Image.asset(
                           'assets/images/pesq. matue.png', 
+
                           fit: BoxFit
                               .cover, 
                         ),
@@ -136,6 +140,7 @@ class ProfileScreen extends StatelessWidget {
                         borderRadius: BorderRadius.circular(8),
                         child: Image.asset(
                           'assets/images/pesq. jm.png',
+
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -149,6 +154,7 @@ class ProfileScreen extends StatelessWidget {
                         borderRadius: BorderRadius.circular(8),
                         child: Image.asset(
                           'assets/images/pesq veigh.png',
+
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -186,6 +192,7 @@ class ProfileScreen extends StatelessWidget {
                         borderRadius: BorderRadius.circular(8),
                         child: Image.asset(
                           'assets/images/plano.png',
+
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -199,6 +206,7 @@ class ProfileScreen extends StatelessWidget {
                         borderRadius: BorderRadius.circular(8),
                         child: Image.asset(
                           'assets/images/dispositivos.png',
+
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -212,6 +220,7 @@ class ProfileScreen extends StatelessWidget {
                         borderRadius: BorderRadius.circular(8),
                         child: Image.asset(
                           'assets/images/informações.png',
+
                           fit: BoxFit.cover,
                         ),
                       ),
