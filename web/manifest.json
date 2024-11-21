@@ -1,6 +1,6 @@
 {
-    "name": "app_project",
-    "short_name": "app_project",
+    "name": "app_streaming",
+    "short_name": "app_streaming",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
