@@ -11,7 +11,6 @@ import 'package:terceiroprojeto/pages/home.dart';
 import 'package:terceiroprojeto/pages/pesquisa.dart';
 import 'package:terceiroprojeto/pages/videoscreen.dart';
 
-
 void main() {
   runApp(const MyApp());
 }
@@ -38,6 +37,7 @@ class MyApp extends StatelessWidget {
         '/erro': (context) => const Erro(),
         '/home': (context) => const Homepage(),
         '/pesquisa': (context) => const Pesquisa(),
+
       },
     );
   }

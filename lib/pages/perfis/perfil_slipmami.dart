@@ -69,7 +69,9 @@ class GradientScreen extends StatelessWidget {
                                 width: 50,
                                 height: 50,
                                 child: Image.asset(
-                                  'assets/imagens/seta.png',
+
+                                  'assets/images/seta.png',
+
                                   height: 50,
                                 ),
                               ),
@@ -84,7 +86,8 @@ class GradientScreen extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.symmetric(vertical: 20.0),
                       child: Image.asset(
-                        'assets/imagens/slipmami.png',
+                        'assets/images/slipmami.png',
+
                         height: 250,
                       ),
                     ),
@@ -132,7 +135,8 @@ class GradientScreen extends StatelessWidget {
                       child: Padding(
                         padding: const EdgeInsets.symmetric(vertical: 20.0),
                         child: Image.asset(
-                          'assets/imagens/oompaloompa.png',
+                          'assets/images/oompaloompa.png',
+
                         ),
                       ),
                     ),
@@ -159,7 +163,8 @@ class GradientScreen extends StatelessWidget {
                       child: Padding(
                         padding: const EdgeInsets.symmetric(vertical: 20.0),
                         child: Image.asset(
-                          'assets/imagens/cervaswa.png',
+                          'assets/images/cervaswa.png',
+
                         ),
                       ),
                     ),
@@ -186,7 +191,8 @@ class GradientScreen extends StatelessWidget {
                       child: Padding(
                         padding: const EdgeInsets.symmetric(vertical: 20.0),
                         child: Image.asset(
-                          'assets/imagens/ficha.png',
+                          'assets/images/ficha.png',
+
                         ),
                       ),
                     ),
@@ -212,7 +218,8 @@ class GradientScreen extends StatelessWidget {
                     Column(
                       children: [
                         Image.asset(
-                          'assets/imagens/malvatrem.png',
+                          'assets/images/malvatrem.png',
+
                           height: 150,
                         ),
                        
@@ -222,7 +229,8 @@ class GradientScreen extends StatelessWidget {
                     Column(
                       children: [
                         Image.asset(
-                          'assets/imagens/posturada1.png',
+                          'assets/images/posturada1.png',
+
                           height: 150,
                         ),
                            
@@ -241,7 +249,8 @@ class GradientScreen extends StatelessWidget {
                       child: Padding(
                         padding: const EdgeInsets.symmetric(vertical: 20.0),
                         child: Image.asset(
-                          'assets/imagens/slipajudou.png',
+                          'assets/images/slipajudou.png',
+
                         ),
                       ),
                     ),

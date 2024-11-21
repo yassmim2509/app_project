@@ -50,7 +50,8 @@ class ProfileScreen extends StatelessWidget {
                     width: 50,
                     height: 50,
                     child: Image.asset(
-                      'assets/imagens/seta.png', 
+                      'assets/images/seta.png', 
+
                       height: 50,
                     ),
                   ),
@@ -62,7 +63,8 @@ class ProfileScreen extends StatelessWidget {
                      Padding(
                       padding: const EdgeInsets.symmetric(vertical: 20.0),
                       child: Image.asset(
-                        'assets/imagens/foto_usuario.png',
+                        'assets/images/foto_usuario.png',
+
                         height: 200,
                     
                       ),
@@ -105,7 +107,8 @@ class ProfileScreen extends StatelessWidget {
                         borderRadius: BorderRadius.circular(
                             8), 
                         child: Image.asset(
-                          'assets/imagens/pesq. melanie.png', 
+                          'assets/images/pesq. melanie.png', 
+
                           fit: BoxFit
                               .cover, 
                         ),
@@ -121,7 +124,8 @@ class ProfileScreen extends StatelessWidget {
                         borderRadius: BorderRadius.circular(
                             8), 
                         child: Image.asset(
-                          'assets/imagens/pesq. matue.png', 
+                          'assets/images/pesq. matue.png', 
+
                           fit: BoxFit
                               .cover, 
                         ),
@@ -135,7 +139,8 @@ class ProfileScreen extends StatelessWidget {
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(8),
                         child: Image.asset(
-                          'assets/imagens/pesq. jm.png',
+                          'assets/images/pesq. jm.png',
+
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -148,7 +153,8 @@ class ProfileScreen extends StatelessWidget {
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(8),
                         child: Image.asset(
-                          'assets/imagens/pesq veigh.png',
+                          'assets/images/pesq veigh.png',
+
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -185,7 +191,8 @@ class ProfileScreen extends StatelessWidget {
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(8),
                         child: Image.asset(
-                          'assets/imagens/plano.png',
+                          'assets/images/plano.png',
+
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -198,7 +205,8 @@ class ProfileScreen extends StatelessWidget {
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(8),
                         child: Image.asset(
-                          'assets/imagens/dispositivos.png',
+                          'assets/images/dispositivos.png',
+
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -211,7 +219,8 @@ class ProfileScreen extends StatelessWidget {
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(8),
                         child: Image.asset(
-                          'assets/imagens/informações.png',
+                          'assets/images/informações.png',
+
                           fit: BoxFit.cover,
                         ),
                       ),

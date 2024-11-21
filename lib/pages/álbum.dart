@@ -72,7 +72,8 @@ class AlbumScreen extends StatelessWidget {
                           width: 50,
                           height: 50,
                          child: Image.asset(
-                            'assets/imagens/seta.png', 
+                            'assets/images/seta.png', 
+
                             height: 50,
                           ), 
                         ),
@@ -84,7 +85,8 @@ class AlbumScreen extends StatelessWidget {
                       child: Padding(
                         padding: const EdgeInsets.symmetric(vertical: 20.0),
                         child: Image.asset(
-                          'assets/imagens/furia.png',
+                          'assets/images/furia.png',
+
                           height: 250,
                           width: 850,
                         ),
@@ -120,7 +122,8 @@ class AlbumScreen extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.symmetric(vertical: 20.0),
                   child: Image.asset(
-                    'assets/imagens/racha.png', 
+                    'assets/images/racha.png', 
+
                     height: 100,
                   ),
                 ),
@@ -131,7 +134,8 @@ class AlbumScreen extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.symmetric(vertical: 20.0),
                   child: Image.asset(
-                    'assets/imagens/racha.png',
+                    'assets/images/racha.png',
+
                     height: 100,
                   ),
                 ),
@@ -142,7 +146,8 @@ class AlbumScreen extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.symmetric(vertical: 20.0),
                   child: Image.asset(
-                    'assets/imagens/racha.png',
+                    'assets/images/racha.png',
+
                     height: 100,
                   ),
                 ),
@@ -153,7 +158,8 @@ class AlbumScreen extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.symmetric(vertical: 20.0),
                   child: Image.asset(
-                    'assets/imagens/racha.png',
+                    'assets/images/racha.png',
+
                     height: 100,
                   ),
                 ),
@@ -164,7 +170,8 @@ class AlbumScreen extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.symmetric(vertical: 20.0),
                   child: Image.asset(
-                    'assets/imagens/racha.png',
+                    'assets/images/racha.png',
+
                     height: 100,
                   ),
                 ),
@@ -175,7 +182,8 @@ class AlbumScreen extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.symmetric(vertical: 20.0),
                   child: Image.asset(
-                    'assets/imagens/racha.png',
+                    'assets/images/racha.png',
+
                     height: 100,
                   ),
                 ),
@@ -186,7 +194,8 @@ class AlbumScreen extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.symmetric(vertical: 20.0),
                   child: Image.asset(
-                    'assets/imagens/racha.png',
+                    'assets/images/racha.png',
+
                     height: 100,
                   ),
                 ),
@@ -197,7 +206,8 @@ class AlbumScreen extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.symmetric(vertical: 20.0),
                   child: Image.asset(
-                    'assets/imagens/racha.png',
+                    'assets/images/racha.png',
+
                     height: 100,
                   ),
                 ),
