@@ -8,6 +8,13 @@ class Contas extends StatefulWidget {
 }
 
 class _ContasState extends State<Contas> {
+  // Lista de perfis para exibição dinâmica
+  final List<Map<String, String>> _profiles = [
+    {'name': 'Lucas', 'image': 'assets/imagens/lucass.png', 'route': '/home'},
+    {'name': 'Claudete', 'image': 'assets/imagens/claudete.png', 'route': '/home'},
+    {'name': 'Duda', 'image': 'assets/imagens/duda.png', 'route': '/home'},
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -51,19 +58,28 @@ class _ContasState extends State<Contas> {
               ),
             ),
             const SizedBox(height: 20),
-            // Ícones dos perfis de usuário
+            // GridView com perfis de usuário
             Expanded(
-              child: GridView.count(
-                crossAxisCount: 2,
-                mainAxisSpacing: 40,
-                crossAxisSpacing: 40,
+              child: GridView.builder(
                 padding: const EdgeInsets.all(20),
-                children: [
-                  _buildProfileButton('Lucas', 'assets/imagens/lucass.png', context),
-                  _buildProfileButton('Claudete', 'assets/imagens/claudete.png', context),
-                  _buildProfileButton('Duda', 'assets/imagens/duda.png', context),
-                  _buildAddProfileButton(context),
-                ],
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
+                  mainAxisSpacing: 40,
+                  crossAxisSpacing: 40,
+                ),
+                itemCount: _profiles.length + 1, // Perfis + botão de adicionar
+                itemBuilder: (context, index) {
+                  if (index < _profiles.length) {
+                    final profile = _profiles[index];
+                    return _buildProfileButton(
+                      name: profile['name']!,
+                      imagePath: profile['image']!,
+                      route: profile['route']!,
+                    );
+                  } else {
+                    return _buildAddProfileButton();
+                  }
+                },
               ),
             ),
           ],
@@ -73,16 +89,15 @@ class _ContasState extends State<Contas> {
   }
 
   // Função para criar um botão de perfil
-  Widget _buildProfileButton(String name, String imagePath, BuildContext context) {
+  Widget _buildProfileButton({
+    required String name,
+    required String imagePath,
+    required String route,
+  }) {
     return InkWell(
       onTap: () {
         print("Perfil de $name clicado");
-        if (name == 'Lucas') {
-          // Navegar para a rota de erro quando clicar no perfil "Lucas"
-          Navigator.pushNamed(context, '/home');
-        } else {
-          // Aqui você pode adicionar lógica para outras contas, se necessário
-        }
+        Navigator.pushNamed(context, route);
       },
       child: Column(
         children: [
@@ -104,7 +119,7 @@ class _ContasState extends State<Contas> {
   }
 
   // Função para criar o botão de adição de novo perfil
-  Widget _buildAddProfileButton(BuildContext context) {
+  Widget _buildAddProfileButton() {
     return InkWell(
       onTap: () {
         print("Adicionar nova conta clicado");

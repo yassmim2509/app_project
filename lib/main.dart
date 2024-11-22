@@ -41,7 +41,7 @@ class MyApp extends StatelessWidget {
         '/home': (context) =>  Homepage(),
         '/pesquisa' : (context) => const Pesquisa(),
         '/biblioteca' : (context) => const Biblioteca(),
-        '/tocando' : (context) => const Biblioteca(),
+        '/tocando' : (context) => const Tocando(),
         '/album': (context) => Tocando(),
         '/perfil_usuario': (context) => ProfileScreen(),
         '/perfil_slipmami': (context) => GradientScreen(),

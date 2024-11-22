@@ -18,8 +18,11 @@ class _VideoScreenState extends State<VideoScreen> {
   @override
   void initState() {
     super.initState();
+    _initializeWebView();
+  }
 
-    // Inicializar o WebViewController com suporte para Android e iOS.
+  // Função para inicializar o WebView com suporte tanto para Android quanto iOS
+  void _initializeWebView() {
     if (WebViewPlatform.instance is WebKitWebViewPlatform) {
       final creationParams = WebKitWebViewControllerCreationParams();
       _controller = WebViewController.fromPlatformCreationParams(creationParams);
@@ -30,7 +33,7 @@ class _VideoScreenState extends State<VideoScreen> {
       _controller = WebViewController();
     }
 
-    // Configurar o WebViewController
+    // Configurar o WebView
     _controller
       ..setJavaScriptMode(JavaScriptMode.unrestricted)
       ..loadRequest(Uri.parse(widget.videoUrl));
@@ -39,21 +42,29 @@ class _VideoScreenState extends State<VideoScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.black,
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back, color: Colors.white),
-          onPressed: () {
-            Navigator.pop(context); // Voltar para a tela anterior
-          },
-        ),
-        title: const Text('Tanto faz - Urias', 
+      appBar: _buildAppBar(),
+      body: WebViewWidget(controller: _controller),
+    );
+  }
+
+  // Função para construir o AppBar
+  AppBar _buildAppBar() {
+    return AppBar(
+      backgroundColor: Colors.black,
+      leading: IconButton(
+        icon: const Icon(Icons.arrow_back, color: Colors.white),
+        onPressed: () {
+          Navigator.pop(context); // Voltar para a tela anterior
+        },
+      ),
+      title: const Text(
+        'Tanto faz - Urias',
         style: TextStyle(
           color: Colors.white,
           fontFamily: 'LexendGiga',
-          fontSize: 16)),
+          fontSize: 16,
+        ),
       ),
-      body: WebViewWidget(controller: _controller),
     );
   }
 }

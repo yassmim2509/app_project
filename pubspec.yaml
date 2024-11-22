@@ -65,7 +65,7 @@ flutter:
 
     - assets/imagens/
     - assets/images/
-    - assets/,
+    - assets/
     
 
   #  - assets/imagens/logo.png
@@ -99,13 +99,7 @@ flutter:
   fonts:
     - family: Lexend
       fonts:
-
-        - asset: assets/fonts/Lexend-Black.ttf
-        - asset: assets/fonts/Lexend-Bold.ttf
-        - asset: assets/fonts/LexendGiga-Light.ttf
-        - asset: assets/fonts/LexendGiga-Regular.ttf
-        - asset: assets/fonts/Lexend-ExtraBold.ttf
-
+        - asset: assets/fonts/Lexend-Regular.ttf
 
     # - family: LexendGiga
     #   fonts:
