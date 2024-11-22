@@ -1,6 +1,7 @@
+import 'package:app_streaming/pages/login.dart';
+import 'package:app_streaming/pages/style.dart';
 import 'package:flutter/material.dart';
-import 'package:quintoflutter/shared/style.dart';
-import 'package:quintoflutter/pages/login.dart';
+
 
 void main() {
   runApp(MyApp());
@@ -29,7 +30,7 @@ class HomeScreen extends StatelessWidget {
       body: Center(
         child: ElevatedButton(
           onPressed: () {
-            Navigator.pushNamed(context, '/album');
+            Navigator.pushNamed(context, '/tocando');
           },
           child: Text(''),
         ),
@@ -48,7 +49,7 @@ class AlbumScreen extends StatelessWidget {
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
             colors: [
-              MyColors.gradientpreto,
+              MinhaCor.gradientpreto,
               const Color.fromARGB(139, 255, 255, 255),
             ],
           ),
@@ -66,7 +67,7 @@ class AlbumScreen extends StatelessWidget {
                       offset: Offset(-160, 25),
                       child: GestureDetector(
                         onTap: () {
-                          Navigator.pushNamed(context, '/login');
+                          Navigator.pushNamed(context, '/tocando');
                         },
                         child: Container(
                           width: 50,

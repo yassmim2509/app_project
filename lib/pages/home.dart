@@ -1,14 +1,14 @@
+import 'package:app_streaming/pages/home.dart';
+import 'package:app_streaming/pages/pesquisa.dart';
+import 'package:app_streaming/pages/style.dart';
+import 'package:app_streaming/pages/videoscreen.dart';
 import 'package:flutter/material.dart';
-import 'package:terceiroprojeto/pages/pesquisa.dart';
-import 'package:terceiroprojeto/pages/videoscreen.dart';
+
 import 'package:url_launcher/url_launcher.dart'; // Import para abrir links no navegador.
-import 'home.dart';
-import 'cadastro.dart';
-import 'login.dart';
-import 'package:terceiroprojeto/shared/style.dart';
+
 
 class Homepage extends StatelessWidget {
-  Homepage ({super.key});
+   Homepage ({super.key});
 
   final List<Map<String, String>> playlists = [
     {'image': 'assets/images/furia(album).jpg', 'name': 'Fúria'},
@@ -55,7 +55,7 @@ class Homepage extends StatelessWidget {
       body: Container(
         decoration: BoxDecoration(
           gradient: LinearGradient(
-            colors: [MyColors.PrimariaBase, Colors.black],
+            colors: [MinhaCor.PrimariaBase, Colors.black],
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
           ),
@@ -369,7 +369,7 @@ class Homepage extends StatelessWidget {
           label: "Biblioteca",
         ),
       ],
-      selectedItemColor: MyColors.PrimariaBase,
+      selectedItemColor: MinhaCor.PrimariaBase,
       unselectedItemColor: Colors.white,
       currentIndex: 0,
       onTap: (index) {
@@ -386,4 +386,5 @@ class Homepage extends StatelessWidget {
     );
   }
 }
+
 

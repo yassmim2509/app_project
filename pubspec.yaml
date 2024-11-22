@@ -63,36 +63,38 @@ dev_dependencies:
 flutter:
   assets:
 
-   - assets/imagens/logo.png
-    - assets/imagens/estrelalogin.png
-    - assets/imagens/gifsplash.gif
-    - assets/imagens/gifindividual.gif
-    - assets/imagens/slipmami.png
-    - assets/imagens/oompaloompa.png 
-    - assets/imagens/cervaswa.png
-    - assets/imagens/ficha.png
-    - assets/imagens/malvatrem.png
-    - assets/imagens/posturada1.png
-    - assets/imagens/slipajudou.png
-    - assets/imagens/seta.png
-    - assets/imagens/racha.png
-    - assets/imagens/furia.png
-    - assets/imagens/foto_usuario.png
-    - assets/imagens/pesq. melanie.png
-    - assets/imagens/pesq. matue.png
-    - assets/imagens/pesq. jm.png
-    - assets/imagens/pesq veigh.png
-    - assets/imagens/dispositivos.png
-    - assets/imagens/informações.png
-    - assets/imagens/plano.png
+    - assets/imagens/
+    - assets/images/
+    - assets/,
+    
+
+  #  - assets/imagens/logo.png
+  #  - assets/imagens/estrelalogin.png
+  #  - assets/imagens/gifsplash.gif
+  #  - assets/imagens/gifindividual.gif
+  #  - assets/imagens/slipmami.png
+  #  - assets/imagens/oompaloompa.png 
+  #  - assets/imagens/cervaswa.png
+  #   - assets/imagens/ficha.png
+  #   - assets/imagens/malvatrem.png
+  #   - assets/imagens/posturada1.png
+  #   - assets/imagens/slipajudou.png
+  #   - assets/imagens/seta.png
+  #   - assets/imagens/racha.png
+  #   - assets/imagens/furia.png
+  #   - assets/imagens/foto_usuario.png
+  #   - assets/imagens/pesq. melanie.png
+  #   - assets/imagens/pesq. matue.png
+  #   - assets/imagens/pesq. jm.png
+  #   - assets/imagens/pesq veigh.png
+  #   - assets/imagens/dispositivos.png
+  #   - assets/imagens/informações.png
+  #   - assets/imagens/plano.png
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
-
-  assets:
-   - assets/images/
    
   fonts:
     - family: Lexend
@@ -100,11 +102,15 @@ flutter:
 
         - asset: assets/fonts/Lexend-Black.ttf
         - asset: assets/fonts/Lexend-Bold.ttf
-
-    - family: LexendGiga
-      fonts:
         - asset: assets/fonts/LexendGiga-Light.ttf
         - asset: assets/fonts/LexendGiga-Regular.ttf
+        - asset: assets/fonts/Lexend-ExtraBold.ttf
+
+
+    # - family: LexendGiga
+    #   fonts:
+    #     - asset: assets/fonts/LexendGiga-Light.ttf
+    #     - asset: assets/fonts/LexendGiga-Regular.ttf
 
 
 
@@ -127,13 +133,6 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-
-
-  fonts:
-    - family: Lexend
-      fonts:
-        - asset: assets/fonts/Lexend-ExtraBold.ttf
-        
 
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic

@@ -2,14 +2,18 @@
 import 'package:app_streaming/pages/adicioneConta.dart';
 import 'package:app_streaming/pages/contas.dart';
 import 'package:app_streaming/pages/erro.dart';
+import 'package:app_streaming/pages/login.dart';
 import 'package:flutter/material.dart';
+import 'package:app_streaming/pages/cadastro.dart';
 import 'package:app_streaming/pages/style.dart';
-import 'package:quintoflutter/pages/perfis/perfil_slipmami.dart';
-import 'package:quintoflutter/pages/álbum.dart';
-import 'package:quintoflutter/pages/perfis/perfil_usuario.dart';
-import 'package:terceiroprojeto/pages/home.dart';
-import 'package:terceiroprojeto/pages/pesquisa.dart';
-import 'package:terceiroprojeto/pages/videoscreen.dart';
+import 'package:app_streaming/pages/álbum.dart';
+import 'package:app_streaming/pages/perfil_usuario.dart';
+import 'package:app_streaming/pages/perfil_slipmami.dart';
+import 'package:app_streaming/pages/home.dart';
+import 'package:app_streaming/pages/pesquisa.dart';
+import 'package:app_streaming/pages/videoscreen.dart';
+import 'package:app_streaming/pages/biblioteca.dart';
+import 'package:app_streaming/pages/tocando.dart';
 
 void main() {
   runApp(const MyApp());
@@ -27,16 +31,27 @@ class MyApp extends StatelessWidget {
       fontFamily: myFonts.fontPrimary,
         useMaterial3: true,
       ),
-      initialRoute: "/contas",
+      initialRoute: "/videoscreen",
       routes: {
-        '/gradient': (context) => GradientScreen(),
-        '/album': (context) => AlbumScreen(),
-        '/usuario': (context) => ProfileScreen(),
+        '/login' : (context) => const Login(),  
+        '/cadastro' : (context) => const Cadastro(),  
         '/contas': (context) => const Contas(),
         '/adicioneConta' : (context) => const AdicioneConta(),
-        '/erro': (context) => const Erro(),
-        '/home': (context) => const Homepage(),
-        '/pesquisa': (context) => const Pesquisa(),
+        '/erro' : (context) => const Erro(),
+        '/home': (context) =>  Homepage(),
+        '/pesquisa' : (context) => const Pesquisa(),
+        '/biblioteca' : (context) => const Biblioteca(),
+        '/tocando' : (context) => const Biblioteca(),
+        '/album': (context) => Tocando(),
+        '/perfil_usuario': (context) => ProfileScreen(),
+        '/perfil_slipmami': (context) => GradientScreen(),
+        
+
+        
+        
+     
+
+        
 
       },
     );

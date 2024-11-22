@@ -79,7 +79,7 @@ class _ContasState extends State<Contas> {
         print("Perfil de $name clicado");
         if (name == 'Lucas') {
           // Navegar para a rota de erro quando clicar no perfil "Lucas"
-          Navigator.pushNamed(context, '/erro');
+          Navigator.pushNamed(context, '/home');
         } else {
           // Aqui você pode adicionar lógica para outras contas, se necessário
         }

@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class Bilbioteca extends StatefulWidget {
-  const Bilbioteca({super.key});
+class Biblioteca extends StatefulWidget {
+  const Biblioteca({super.key});
 
   @override
-  State<Bilbioteca> createState() => _HomeState();
+  State<Biblioteca> createState() => _HomeState();
 }
 
-class _HomeState extends State<Bilbioteca> {
+class _HomeState extends State<Biblioteca> {
   final _formKey = GlobalKey<FormState>();
   bool _showPassword = false;
 
@@ -43,7 +43,7 @@ class _HomeState extends State<Bilbioteca> {
                         children: [
                           GestureDetector(
                             onTap: () {
-                              Navigator.pushNamed(context, '/tocando');
+                              Navigator.pushNamed(context, '/perfil_slipmami');
                             },
                             child: Image.asset(
                               "assets/fotoperfil.png",
@@ -66,7 +66,7 @@ class _HomeState extends State<Bilbioteca> {
                         right: 0, // Posiciona o botão à direita
                         child: GestureDetector(
                           onTap: () {
-                            Navigator.pushNamed(context, '/tocando');
+                            Navigator.pushNamed(context, '/perfil_slipmami');
                           },
                           child: Image.asset(
                             "assets/adicionar.png",
@@ -82,7 +82,7 @@ class _HomeState extends State<Bilbioteca> {
                 Center(
                   child: GestureDetector(
                     onTap: () {
-                      Navigator.pushNamed(context, '/tocando');
+                      Navigator.pushNamed(context, '/perfil_slipmami');
                     },
                     child: Image.asset(
                       "assets/retangulobibli.png"
@@ -93,7 +93,7 @@ class _HomeState extends State<Bilbioteca> {
                 Center(
                   child: GestureDetector(
                     onTap: () {
-                      Navigator.pushNamed(context, '/tocando');
+                      Navigator.pushNamed(context, '/perfil_slipmami');
                     },
                     child: Image.asset(
                       "assets/retangulobibli1.png"
@@ -104,7 +104,7 @@ class _HomeState extends State<Bilbioteca> {
                 Center(
                   child: GestureDetector(
                     onTap: () {
-                      Navigator.pushNamed(context, '/tocando');
+                      Navigator.pushNamed(context, '/perfil_slipmami');
                     },
                     child: Image.asset(
                       "assets/retangulobibli2.png"
@@ -115,7 +115,7 @@ class _HomeState extends State<Bilbioteca> {
                 Center(
                   child: GestureDetector(
                     onTap: () {
-                      Navigator.pushNamed(context, '/tocando');
+                      Navigator.pushNamed(context, '/perfil_slipmami');
                     },
                     child: Image.asset(
                       "assets/retangulobibli3.png"
@@ -126,7 +126,7 @@ class _HomeState extends State<Bilbioteca> {
                 Center(
                   child: GestureDetector(
                     onTap: () {
-                      Navigator.pushNamed(context, '/tocando');
+                      Navigator.pushNamed(context, '/perfil_slipmami');
                     },
                     child: Image.asset(
                       "assets/retangulobibli4.png"
@@ -137,7 +137,7 @@ class _HomeState extends State<Bilbioteca> {
                 Center(
                   child: GestureDetector(
                     onTap: () {
-                      Navigator.pushNamed(context, '/tocando');
+                      Navigator.pushNamed(context, '/perfil_slipmami');
                     },
                     child: Image.asset(
                       "assets/retangulobibli5.png"
@@ -148,7 +148,7 @@ class _HomeState extends State<Bilbioteca> {
                 Center(
                   child: GestureDetector(
                     onTap: () {
-                      Navigator.pushNamed(context, '/tocando');
+                      Navigator.pushNamed(context, '/perfil_slipmami');
                     },
                     child: Image.asset(
                       "assets/retangulobibli6.png"
@@ -159,7 +159,7 @@ class _HomeState extends State<Bilbioteca> {
                 Center(
                   child: GestureDetector(
                     onTap: () {
-                      Navigator.pushNamed(context, '/tocando');
+                      Navigator.pushNamed(context, '/perfil_slipmami');
                     },
                     child: Image.asset(
                       "assets/retangulobibli7.png"

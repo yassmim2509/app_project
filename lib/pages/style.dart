@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
-class MyColors {
+class MinhaCor {
+  
+  static const Color PrimariaBase = Color(0xFF910D65);
 
   static const Color roxoEscuro = Color.fromARGB(255, 129, 0, 146);
 

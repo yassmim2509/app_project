@@ -35,7 +35,7 @@ class _TocandoState extends State<Tocando> {
                     children: [
                       GestureDetector(
                         onTap: () {
-                          Navigator.pushNamed(context, '/cadastro');
+                          Navigator.pushNamed(context, '/perfil_slipmami');
                         },
                         child: Image.asset(
                           "assets/setadescer.png",
@@ -68,7 +68,7 @@ class _TocandoState extends State<Tocando> {
                 Center(
                   child: GestureDetector(
                     onTap: () {
-                      Navigator.pushNamed(context, '/tocando');
+                      Navigator.pushNamed(context, '/perfil_slipmami');
                     },
                     child: Image.asset(
                       "assets/capamusica.png"
@@ -105,7 +105,7 @@ class _TocandoState extends State<Tocando> {
                 Center(
                   child: GestureDetector(
                     onTap: () {
-                      Navigator.pushNamed(context, '/cadastro');
+                      Navigator.pushNamed(context, '/perfil_slipmami');
                     },
                     child: Image.asset(
                       "assets/play.png"
@@ -118,7 +118,7 @@ class _TocandoState extends State<Tocando> {
                   children: [
                     GestureDetector(
                       onTap: () {
-                        Navigator.pushNamed(context, '/cadastro');
+                        Navigator.pushNamed(context, '/perfil_slipmami');
                       },
                       child: Image.asset(
                         "assets/setas.png"
@@ -134,7 +134,7 @@ class _TocandoState extends State<Tocando> {
                     ),
                     GestureDetector(
                       onTap: () {
-                        Navigator.pushNamed(context, '/cadastro');
+                        Navigator.pushNamed(context, '/perfil_slipmami');
                       },
                       child: Image.asset(
                         "assets/compartilhar.png"
