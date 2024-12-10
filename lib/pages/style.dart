@@ -27,7 +27,17 @@ class MinhaCor {
   static const Color gradientBranco = Color.fromARGB(255, 255, 255, 255);
 
   static const Color fucsiaRosa = Color.fromARGB(255, 175, 11, 126);
+  // ---------------------------------------------------------------------------
 
+  static const Color vermelho = Color.fromARGB(255, 175, 11, 11);
+
+  static const Color lilas = Color.fromARGB(255, 144, 98, 187);
+
+  static const Color marrom = Color.fromARGB(255, 116, 51, 13);
+
+  static const Color marromClaro = Color.fromARGB(255, 143, 102, 79);
+
+  static const Color azulClaro = Color.fromARGB(255, 97, 177, 243);
 }
 // ignore: camel_case_types
 class myFonts {

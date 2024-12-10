@@ -1,3 +1,4 @@
+import 'package:app_streaming/pages/erro.dart';
 import 'package:flutter/material.dart';
 
 class Contas extends StatefulWidget {
@@ -8,13 +9,6 @@ class Contas extends StatefulWidget {
 }
 
 class _ContasState extends State<Contas> {
-  // Lista de perfis para exibição dinâmica
-  final List<Map<String, String>> _profiles = [
-    {'name': 'Lucas', 'image': 'assets/imagens/lucass.png', 'route': '/home'},
-    {'name': 'Claudete', 'image': 'assets/imagens/claudete.png', 'route': '/home'},
-    {'name': 'Duda', 'image': 'assets/imagens/duda.png', 'route': '/home'},
-  ];
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,7 +34,7 @@ class _ContasState extends State<Contas> {
             InkWell(
               onTap: () {
                 print("Logo clicado");
-                Navigator.pushNamed(context, '/contas');
+                Navigator.pushNamed(context, '/home');
               },
               child: Image.asset(
                 "assets/imagens/logo.png",
@@ -58,28 +52,19 @@ class _ContasState extends State<Contas> {
               ),
             ),
             const SizedBox(height: 20),
-            // GridView com perfis de usuário
+            // Ícones dos perfis de usuário
             Expanded(
-              child: GridView.builder(
+              child: GridView.count(
+                crossAxisCount: 2,
+                mainAxisSpacing: 40,
+                crossAxisSpacing: 40,
                 padding: const EdgeInsets.all(20),
-                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2,
-                  mainAxisSpacing: 40,
-                  crossAxisSpacing: 40,
-                ),
-                itemCount: _profiles.length + 1, // Perfis + botão de adicionar
-                itemBuilder: (context, index) {
-                  if (index < _profiles.length) {
-                    final profile = _profiles[index];
-                    return _buildProfileButton(
-                      name: profile['name']!,
-                      imagePath: profile['image']!,
-                      route: profile['route']!,
-                    );
-                  } else {
-                    return _buildAddProfileButton();
-                  }
-                },
+                children: [
+                  _buildProfileButton('Lucas', 'assets/imagens/lucass.png', context),
+                  _buildProfileButton('Claudete', 'assets/imagens/claudete.png', context),
+                  _buildProfileButton('Duda', 'assets/imagens/duda.png', context),
+                  _buildAddProfileButton(context),
+                ],
               ),
             ),
           ],
@@ -89,16 +74,18 @@ class _ContasState extends State<Contas> {
   }
 
   // Função para criar um botão de perfil
-  Widget _buildProfileButton({
-    required String name,
-    required String imagePath,
-    required String route,
-  }) {
+  Widget _buildProfileButton(String name, String imagePath, BuildContext context) {
     return InkWell(
       onTap: () {
         print("Perfil de $name clicado");
-        Navigator.pushNamed(context, route);
+        if (name == 'Lucas') {
+          // Navegar para a rota de erro quando clicar no perfil "Lucas"
+          Navigator.pushNamed(context, '/erro');
+        } else {
+          Navigator.pushNamed(context, '/home');
+        }
       },
+    
       child: Column(
         children: [
           CircleAvatar(
@@ -119,7 +106,7 @@ class _ContasState extends State<Contas> {
   }
 
   // Função para criar o botão de adição de novo perfil
-  Widget _buildAddProfileButton() {
+  Widget _buildAddProfileButton(BuildContext context) {
     return InkWell(
       onTap: () {
         print("Adicionar nova conta clicado");

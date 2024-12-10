@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "166382119160",
+    "project_id": "app-streaming-50a6e",
+    "storage_bucket": "app-streaming-50a6e.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:166382119160:android:0382e0ee7d3ec1f8f5f30d",
+        "android_client_info": {
+          "package_name": "duda.flutter.app_streaming"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBWczXYswbQfGgWulinEJnWsFTmNpJA-aI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

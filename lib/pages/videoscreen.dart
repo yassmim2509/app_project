@@ -6,7 +6,7 @@ import 'package:webview_flutter_wkwebview/webview_flutter_wkwebview.dart';
 class VideoScreen extends StatefulWidget {
   final String videoUrl;
 
-  const VideoScreen({Key? key, required this.videoUrl}) : super(key: key);
+  const VideoScreen({super.key, required this.videoUrl});
 
   @override
   State<VideoScreen> createState() => _VideoScreenState();

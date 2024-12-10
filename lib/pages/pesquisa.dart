@@ -1,4 +1,6 @@
-import 'package:app_streaming/pages/style.dart';
+import 'package:app_streaming/pages/biblioteca.dart';
+import 'package:app_streaming/pages/home.dart';
+import 'package:app_streaming/pages/álbum.dart';
 import 'package:app_streaming/shared/style.dart';
 import 'package:flutter/material.dart';
 
@@ -15,6 +17,11 @@ class Pesquisa extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData.dark(),
       home: const SearchScreen(),
+      routes: {
+        '/album': (context) => AlbumScreen(),
+        '/home': (context) => Homepage(),
+        '/biblioteca': (context) => const Biblioteca(),
+      },
     );
   }
 }
@@ -25,156 +32,200 @@ class SearchScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            colors: [
-              MyColors.PrimariaBase,
-              Colors.black,
-            ],
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-          ),
-        ),
-        child: SingleChildScrollView(
-          child: Padding(
-            padding: const EdgeInsets.all(16.0),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const SizedBox(height: 60),
-
-                // Campo de Pesquisa
-                _buildSearchField(),
-
-                const SizedBox(height: 32),
-
-                // Seção Brasileiras
-                _buildSection('BRASILEIRAS', [
-                  _buildCard('FÚRIA - URIAS', 'assets/images/furia(album).jpg', Icons.music_note),
-                  _buildCard('CAJU - LINIKER', 'assets/images/caju(album).jpg', Icons.music_note),
-                  _buildCard('MENINA MÁ - ANITTA', 'assets/images/meninama.jpg', Icons.music_note),
-                  _buildCard('LOUCA DE SAUDADE - JORGE E MATEUS', 'assets/images/loucadesaudade.jpg', Icons.music_note),
-                ]),
-
-                const SizedBox(height: 24),
-
-                // Seção Podcasts
-                _buildSection('PODCASTS', [
-                  _buildCard('PEEWEECAST', 'assets/images/peweecast.jpg', Icons.headphones),
-                  _buildCard('CAFÉ COM CRIME', 'assets/images/cafecomcrime.jpg', Icons.headphones),
-                  _buildCard('INTELIGÊNCIA LIMITADA', 'assets/images/ltda.jpg', Icons.headphones),
-                  _buildCard('PODPAH', 'assets/images/podpah.jpg', Icons.headphones),
-                ]),
-
-                const SizedBox(height: 24),
-
-                // Seção Lançamentos
-                _buildSection('LANÇAMENTOS', [
-                  _buildCard('AJU - AJULIACOSTA', 'assets/images/aju(ep).png', Icons.music_note),
-                  _buildCard('BELLAKEO - ANITTA FEAT. PESO PLUMA', 'assets/images/bellakeo.jpg', Icons.music_note),
-                  _buildCard('NOSSO PRIMIEOR BEIJO - GLORIA GROOVE', 'assets/images/primeirobeijo.jpg', Icons.music_note),
-                  _buildCard('MAGNATA - URIAS', 'assets/images/magnata.jpg', Icons.music_note),
-                ]),
-              ],
+        body: Container(
+          // Aplicando o gradiente de fundo
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              colors: [MyColors.PrimariaBase, Colors.black],
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
             ),
           ),
-        ),
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Colors.black,
-        items: const [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: "Início",
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.search),
-            label: "Pesquisa",
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.library_music),
-            label: "Biblioteca",
-          ),
-        ],
-        selectedItemColor: MyColors.PrimariaBase,
-        unselectedItemColor: Colors.white,
-        currentIndex: 0,
-        onTap: (index) {
-          if (index == 1) {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => Pesquisa()),
-            );
-          }
-        },
-      ),
-    );
-  }
+          child: SingleChildScrollView(
+            child: Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const SizedBox(
+                      height:
+                          60), // Espaçamento extra para descer a barra de pesquisa
 
-  // Função para o campo de pesquisa
-  Widget _buildSearchField() {
-    return Container(
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(20),
-      ),
-      child: Row(
-        children: [
-          // Imagem de perfil circular
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: CircleAvatar(
-              radius: 18,
-              backgroundImage: AssetImage('assets/images/perfil.png'),
-            ),
-          ),
-          // Campo de texto
-          Expanded(
-            child: TextField(
-              decoration: InputDecoration(
-                hintText: 'O que você quer ouvir?',
-                hintStyle: const TextStyle(color: Colors.black38),
-                border: InputBorder.none,
-                contentPadding: const EdgeInsets.symmetric(vertical: 13),
+                  // Campo de Pesquisa
+                  // Campo de Pesquisa com imagem de perfil
+                  Container(
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    child: Row(
+                      children: [
+                        // Imagem de perfil circular
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: CircleAvatar(
+                            radius: 18,
+                            backgroundImage: AssetImage(
+                                'assets/images/perfil.png'), // Caminho da imagem de perfil
+                          ),
+                        ),
+
+                        // Campo de texto
+                        Expanded(
+                          child: TextField(
+                            style: const TextStyle(
+                              color: Colors
+                                  .black, // Define a cor do texto digitado como preto
+                            ),
+                            decoration: InputDecoration(
+                              hintText: 'O que você quer ouvir?',
+                              hintStyle: const TextStyle(color: Colors.black),
+                              border: InputBorder.none,
+                              contentPadding:
+                                  const EdgeInsets.symmetric(vertical: 13),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+
+                  const SizedBox(
+                      height: 32), // Ajustado para dar mais espaçamento
+// Seção Brasileiras
+                  buildSectionTitle('BRASILEIRAS'),
+                  buildHorizontalList([
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.pushNamed(
+                            context, '/furia'); // Navega para a rota 'FÚRIA'
+                      },
+                      child: buildCard(
+                        'FÚRIA - URIAS',
+                        'assets/images/furia(album).jpg',
+                        Icons.music_note,
+                      ),
+                    ),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.pushNamed(
+                            context, '/album'); // Navega para a rota 'CAJU'
+                      },
+                      child: buildCard(
+                        'CAJU - LINIKER',
+                        'assets/images/caju(album).jpg',
+                        Icons.music_note,
+                      ),
+                    ),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.pushNamed(context,
+                            '/meninama'); // Navega para a rota 'MENINA MÁ'
+                      },
+                      child: buildCard(
+                        'MENINA MÁ - ANITTA',
+                        'assets/images/meninama.jpg',
+                        Icons.music_note,
+                      ),
+                    ),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.pushNamed(context,
+                            '/loucadesaudade'); // Navega para a rota 'LOUCA DE SAUDADE'
+                      },
+                      child: buildCard(
+                        'LOUCA DE SAUDADE - JORGE E MATEUS',
+                        'assets/images/loucadesaudade.jpg',
+                        Icons.music_note,
+                      ),
+                    ),
+                  ]),
+
+                  const SizedBox(height: 24),
+
+                  // Seção Podcasts
+                  buildSectionTitle('PODCASTS'),
+                  buildHorizontalList([
+                    buildCard('PEEWEECAST', 'assets/images/peweecast.jpg',
+                        Icons.headphones),
+                    buildCard('CAFÉ COM CRIME',
+                        'assets/images/cafecomcrime.jpg', Icons.headphones),
+                    buildCard('INTELIGÊNCIA LIMITADA', 'assets/images/ltda.jpg',
+                        Icons.headphones),
+                    buildCard(
+                        'PODPAH', 'assets/images/podpah.jpg', Icons.headphones),
+                  ]),
+                  const SizedBox(height: 24),
+
+                  // Seção Lançamentos
+                  buildSectionTitle('LANÇAMENTOS'),
+                  buildHorizontalList([
+                    buildCard('AJU - AJULIACOSTA', 'assets/images/aju(ep).png',
+                        Icons.music_note),
+                    buildCard('BELLAKEO - ANITTA FEAT. PESO PLUMA',
+                        'assets/images/bellakeo.jpg', Icons.music_note),
+                    buildCard('NOSSO PRIMIEOR BEIJO - GLORIA GROOVE',
+                        'assets/images/primeirobeijo.jpg', Icons.music_note),
+                    buildCard('MAGNATA - URIAS', 'assets/images/magnata.jpg',
+                        Icons.music_note),
+                  ]),
+                ],
               ),
             ),
           ),
-        ],
-      ),
-    );
+        ),
+        bottomNavigationBar: BottomNavigationBar(
+          backgroundColor: Colors.black,
+          items: const [
+            BottomNavigationBarItem(
+              icon: Icon(Icons.home),
+              label: "Início",
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.search),
+              label: "Pesquisa",
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.library_music),
+              label: "Biblioteca",
+            ),
+          ],
+          selectedItemColor: MyColors.PrimariaBase,
+          unselectedItemColor: Colors.white,
+          currentIndex: 0,
+          onTap: (index) {
+            // Adicionando a navegação para a tela de pesquisa
+            // Navegação ao selecionar um item
+            if (index == 0) {
+              Navigator.pushNamed(context, '/home');
+            } else if (index == 1) {
+            } else if (index == 2) {
+              Navigator.pushNamed(context, '/biblioteca');
+            }
+          },
+        ));
   }
 
-  // Função para construir título da seção
-  Widget _buildSection(String title, List<Widget> cards) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        _buildSectionTitle(title),
-        _buildHorizontalList(cards),
-      ],
-    );
-  }
-
-  // Função para construir o título da seção
-  Widget _buildSectionTitle(String title) {
+  // titulo da seção
+  Widget buildSectionTitle(String title) {
     return Padding(
       padding: const EdgeInsets.only(bottom: 12.0),
       child: Text(
         title,
         style: const TextStyle(
           color: Colors.white,
-          fontSize: 20,
+          fontSize: 20, // Aumentar o tamanho da fonte
           fontWeight: FontWeight.bold,
-          fontFamily: 'Lexend',
-          letterSpacing: 1.0,
+          fontFamily:
+              'Lexend', // Certifique-se de que a fonte 'Lexend' está disponível
+          letterSpacing: 1.0, // Adicionar espaçamento entre letras
         ),
       ),
     );
   }
 
-  // Função para construir lista horizontal de cards
-  Widget _buildHorizontalList(List<Widget> cards) {
+  //  lista horizontal albuns
+  Widget buildHorizontalList(List<Widget> cards) {
     return SizedBox(
       height: 150,
       child: ListView(
@@ -184,8 +235,8 @@ class SearchScreen extends StatelessWidget {
     );
   }
 
-  // Função para criar cada card de álbum
-  Widget _buildCard(String title, String imageUrl, IconData icon) {
+  //albuns
+  Widget buildCard(String title, String imageUrl, IconData icon) {
     return Container(
       margin: const EdgeInsets.only(right: 16.0),
       width: 160,
@@ -213,16 +264,17 @@ class SearchScreen extends StatelessWidget {
           ),
           const SizedBox(height: 10),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 8.0),
+            padding: const EdgeInsets.symmetric(
+                horizontal: 8.0), // Adicionado padding
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Icon(
                   icon,
-                  color: Colors.white70,
-                  size: 16,
+                  color: Colors.white70, // Cor do ícone
+                  size: 16, // Tamanho do ícone
                 ),
-                const SizedBox(width: 8),
+                const SizedBox(width: 8), // Espaço entre ícone e o título
                 Expanded(
                   child: Text(
                     title,
@@ -230,7 +282,7 @@ class SearchScreen extends StatelessWidget {
                       color: Colors.white70,
                       fontSize: 12,
                       fontWeight: FontWeight.normal,
-                      fontFamily: 'LexendGiga',
+                      fontFamily: 'Lexendregular',
                     ),
                     textAlign: TextAlign.center,
                     maxLines: 1,

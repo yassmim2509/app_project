@@ -1,12 +1,13 @@
+import 'package:app_streaming/pages/login.dart';
+import 'package:app_streaming/pages/style.dart';
 import 'package:flutter/material.dart';
 
+
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -14,27 +15,24 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       routes: {
-        '/album': (context) => const AlbumScreen(),
-        '/login': (context) => const LoginScreen(),
-        '/tocando': (context) => const TocandoScreen(),
+        '/album': (context) => AlbumScreen(),
+        '/login': (context) => Login(),
       },
-      home: const HomeScreen(),
+      home: HomeScreen(),
     );
   }
 }
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
         child: ElevatedButton(
           onPressed: () {
-            Navigator.pushNamed(context, '/album');
+            Navigator.pushNamed(context, '/tocando');
           },
-          child: const Text('Ir para Álbum'),
+          child: Text(''),
         ),
       ),
     );
@@ -42,73 +40,173 @@ class HomeScreen extends StatelessWidget {
 }
 
 class AlbumScreen extends StatelessWidget {
-  const AlbumScreen({super.key});
-
   @override
   Widget build(BuildContext context) {
-    // Lista de imagens repetidas
-    final List<String> imagens = List.generate(8, (index) => 'assets/images/racha.png');
-
     return Scaffold(
       body: Container(
-        decoration: const BoxDecoration(
+        decoration: BoxDecoration(
           gradient: LinearGradient(
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
             colors: [
-              Color(0xFF000000), // Preto
-              Color.fromARGB(139, 255, 255, 255), // Branco transparente
+              MinhaCor.gradientpreto,
+              const Color.fromARGB(139, 255, 255, 255),
             ],
           ),
         ),
         child: SingleChildScrollView(
           child: Column(
             children: [
-              const SizedBox(height: 20),
-              GestureDetector(
-                onTap: () {
-                  Navigator.pushNamed(context, '/tocando');
-                },
-                child: Container(
-                  width: 50,
-                  height: 50,
-                  child: Image.asset('assets/images/seta.png'),
+              Center(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    SizedBox(height: 20),
+
+                   Positioned(
+                      top: 45,
+                      left: 16,
+                      child: IconButton(
+                        icon: const Icon(Icons.arrow_back, color: Colors.white),
+                        onPressed: () {
+                          Navigator.pop(context); // Volta para a tela anterior
+                        },
+                      ),
+                    ),
+
+                     Transform.translate(
+                      offset: Offset(0, -5),
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(vertical: 20.0),
+                        child: Image.asset(
+                          'assets/images/furia.png',
+
+                          height: 250,
+                          width: 850,
+                        ),
+                      ),
+                    ),
+
+                  ],
                 ),
               ),
-              const SizedBox(height: 20),
-              Image.asset(
-                'assets/images/furia.png',
-                height: 250,
-                width: 850,
-                fit: BoxFit.contain,
-              ),
-              const SizedBox(height: 10),
-              const Text(
-                "FÚRIA",
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 37,
+              Transform.translate(
+                offset: Offset(0, -23),
+                child: const Text(
+                  "FÚRIA",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 37,
+                  ),
                 ),
               ),
-              const Text(
-                "Urias",
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 16,
-                  fontWeight: FontWeight.normal,
+              Transform.translate(
+                offset: Offset(0, -32),
+                child: const Text(
+                  "Urias",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 16,
+                    fontWeight: FontWeight.normal
+                  ),
                 ),
               ),
-              const SizedBox(height: 20),
-              // Exibição das imagens repetidas em uma lista
-              ...imagens.map(
-                (img) => Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 10.0),
+              Transform.translate(
+                offset: Offset(0, -70),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 20.0),
                   child: Image.asset(
-                    img,
+                    'assets/images/racha.png', 
+
                     height: 100,
                   ),
                 ),
               ),
+
+                      Transform.translate(
+                offset: Offset(0, -145),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 20.0),
+                  child: Image.asset(
+                    'assets/images/racha.png',
+
+                    height: 100,
+                  ),
+                ),
+              ),
+
+              Transform.translate(
+                offset: Offset(0, -220),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 20.0),
+                  child: Image.asset(
+                    'assets/images/racha.png',
+
+                    height: 100,
+                  ),
+                ),
+              ),
+
+                       Transform.translate(
+                offset: Offset(0, -295),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 20.0),
+                  child: Image.asset(
+                    'assets/images/racha.png',
+
+                    height: 100,
+                  ),
+                ),
+              ),
+
+                Transform.translate(
+                offset: Offset(0, -369),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 20.0),
+                  child: Image.asset(
+                    'assets/images/racha.png',
+
+                    height: 100,
+                  ),
+                ),
+              ),
+
+              Transform.translate(
+                offset: Offset(0, -443),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 20.0),
+                  child: Image.asset(
+                    'assets/images/racha.png',
+
+                    height: 100,
+                  ),
+                ),
+              ),
+
+                  Transform.translate(
+                offset: Offset(0, -515),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 20.0),
+                  child: Image.asset(
+                    'assets/images/racha.png',
+
+                    height: 100,
+                  ),
+                ),
+              ),
+
+              Transform.translate(
+                offset: Offset(0, -587),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 20.0),
+                  child: Image.asset(
+                    'assets/images/racha.png',
+
+                    height: 100,
+                  ),
+                ),
+              ),
+
             ],
           ),
         ),
@@ -117,28 +215,3 @@ class AlbumScreen extends StatelessWidget {
   }
 }
 
-class LoginScreen extends StatelessWidget {
-  const LoginScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: Text('Tela de Login'),
-      ),
-    );
-  }
-}
-
-class TocandoScreen extends StatelessWidget {
-  const TocandoScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: Text('Tela Tocando'),
-      ),
-    );
-  }
-}
